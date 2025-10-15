@@ -1,0 +1,564 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Manovyam Light Mode Colors */
+  --bg-level-0: #FFFFFF;
+  --bg-level-1: #F5F5F5;
+  --bg-level-2: #E5E5E5;
+  --bg-level-3: #D5D5D5;
+  
+  --text-primary: #1A1A1A;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+  --text-disabled: #999999;
+  
+  --accent-blue: #0066FF;
+  --accent-purple: #9B59B6;
+  --accent-green: #4ECDC4;
+  --accent-orange: #FF6B35;
+  --accent-red: #FF4757;
+  
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* Manovyam Dark Mode Colors */
+  --bg-level-0: #0A0A0A;
+  --bg-level-1: #1A1A1A;
+  --bg-level-2: #2A2A2A;
+  --bg-level-3: #3A3A3A;
+  
+  --text-primary: #E5E5E5;
+  --text-secondary: #C5C5C5;
+  --text-tertiary: #888888;
+  --text-disabled: #666666;
+  
+  --accent-blue: #0066FF;
+  --accent-purple: #9B59B6;
+  --accent-green: #4ECDC4;
+  --accent-orange: #FF6B35;
+  --accent-red: #FF4757;
+  
+  --background: #0A0A0A;
+  --foreground: #E5E5E5;
+  --card: #1A1A1A;
+  --card-foreground: #E5E5E5;
+  --popover: #1A1A1A;
+  --popover-foreground: #E5E5E5;
+  --primary: #0066FF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #E5E5E5;
+  --muted: #2A2A2A;
+  --muted-foreground: #888888;
+  --accent: #2A2A2A;
+  --accent-foreground: #E5E5E5;
+  --destructive: #FF4757;
+  --destructive-foreground: #FFFFFF;
+  --border: #2A2A2A;
+  --input: #2A2A2A;
+  --ring: #0066FF;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #E5E5E5;
+  --sidebar-primary: #0066FF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #E5E5E5;
+  --sidebar-border: #2A2A2A;
+  --sidebar-ring: #0066FF;
+}
+
+@theme inline {
+  /* Manovyam Background Levels */
+  --color-bg-0: var(--bg-level-0);
+  --color-bg-1: var(--bg-level-1);
+  --color-bg-2: var(--bg-level-2);
+  --color-bg-3: var(--bg-level-3);
+  
+  /* Manovyam Text Colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-disabled: var(--text-disabled);
+  
+  /* Manovyam Accent Colors */
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-green: var(--accent-green);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-red: var(--accent-red);
+  
+  /* ShadCN Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* TipTap Editor Styles */
+.tiptap-editor {
+  min-height: 400px;
+  outline: none;
+  color: var(--text-primary);
+}
+
+.tiptap-editor h1,
+.tiptap-editor h2,
+.tiptap-editor h3,
+.tiptap-editor h4,
+.tiptap-editor h5,
+.tiptap-editor h6 {
+  color: var(--text-primary);
+}
+
+.tiptap-editor h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-editor h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap-editor h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap-editor p {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.tiptap-editor ul,
+.tiptap-editor ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.tiptap-editor li {
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.tiptap-editor code {
+  background: var(--bg-level-2);
+  color: var(--text-primary);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875em;
+}
+
+.tiptap-editor pre {
+  background: var(--bg-level-2);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.tiptap-editor pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.tiptap-editor blockquote {
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.tiptap-editor a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.tiptap-editor a:hover {
+  opacity: 0.8;
+}
+
+.tiptap-editor strong {
+  color: var(--text-primary);
+}
+
+.tiptap-editor em {
+  color: var(--text-primary);
+}
+
+.tiptap-editor .is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--text-tertiary);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Task list styles */
+.tiptap-editor ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tiptap-editor ul[data-type="taskList"] li {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-primary);
+}
+
+.tiptap-editor ul[data-type="taskList"] li > label {
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.tiptap-editor ul[data-type="taskList"] li > div {
+  flex: 1;
+}
+
+/* ProseMirror base styles */
+.ProseMirror {
+  color: var(--text-primary);
+  outline: none;
+}
+
+.ProseMirror p,
+.ProseMirror h1,
+.ProseMirror h2, 
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6,
+.ProseMirror li,
+.ProseMirror td,
+.ProseMirror th {
+  color: var(--text-primary);
+}
+
+/* Animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* AI Critique Block Styles */
+.tiptap-editor .critique-block {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.dark .tiptap-editor .critique-block {
+  background: rgba(59, 130, 246, 0.15);
+  border-left-color: var(--accent-blue);
+}
+
+.tiptap-editor .critique-block h4 {
+  margin: 0 0 12px 0;
+  color: var(--accent-blue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tiptap-editor .critique-block ul {
+  margin: 0;
+  padding-left: 24px;
+  list-style-type: disc;
+}
+
+.tiptap-editor .critique-block li {
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.tiptap-editor .critique-block p {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+/* Context Menu Animation */
+.context-menu-enter {
+  animation: slideIn 0.2s ease-out;
+}
+
+/* Mermaid Diagram Styles */
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure Mermaid text is visible in light mode */
+.mermaid-diagram .nodeLabel,
+.mermaid-diagram .edgeLabel,
+.mermaid-diagram .label,
+.mermaid-diagram text {
+  fill: var(--text-primary) !important;
+}
+
+/* Mermaid shapes and paths */
+.mermaid-diagram .node rect,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node polygon,
+.mermaid-diagram .node path {
+  stroke: var(--accent-blue) !important;
+}
+
+/* Mermaid lines and arrows */
+.mermaid-diagram .edgePath path,
+.mermaid-diagram line {
+  stroke: var(--text-secondary) !important;
+}
+
+/* Mermaid markers (arrow heads) */
+.mermaid-diagram marker path {
+  fill: var(--text-secondary) !important;
+  stroke: var(--text-secondary) !important;
+}
+
+/* Ensure cluster backgrounds are visible */
+.mermaid-diagram .cluster rect {
+  fill: var(--bg-level-1) !important;
+  stroke: var(--border) !important;
+}
+
+/* Note/actor shapes in sequence diagrams */
+.mermaid-diagram .actor {
+  fill: var(--bg-level-2) !important;
+  stroke: var(--accent-blue) !important;
+}
+
+/* Task bars in Gantt charts */
+.mermaid-diagram .task,
+.mermaid-diagram .taskText {
+  fill: var(--accent-blue) !important;
+}
+
+.mermaid-diagram .taskTextOutsideRight,
+.mermaid-diagram .taskTextOutsideLeft {
+  fill: var(--text-primary) !important;
+}
+
+/* Grid lines in Gantt charts */
+.mermaid-diagram .grid .tick line {
+  stroke: var(--border) !important;
+}
+
+.mermaid-diagram .grid .tick text {
+  fill: var(--text-secondary) !important;
+}
+
+/* State diagram styles */
+.mermaid-diagram .statediagram-state rect {
+  fill: var(--bg-level-2) !important;
+  stroke: var(--accent-blue) !important;
+}
+
+/* Class diagram styles */
+.mermaid-diagram .classGroup rect {
+  fill: var(--bg-level-2) !important;
+  stroke: var(--accent-blue) !important;
+}
+
+/* Pie chart styles */
+.mermaid-diagram .pieCircle {
+  stroke: var(--background) !important;
+}
+
+.mermaid-diagram .pieTitleText {
+  fill: var(--text-primary) !important;
+}
